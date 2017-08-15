@@ -13,7 +13,7 @@ import org.apache.hadoop.util.ToolRunner;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-public class App {
+public class AvgStat {
     public static class MyMapper extends Mapper<Object, Text, Text, IntWritable> {
         @Override
         protected void map(Object key, Text value, Context context) throws IOException, InterruptedException {
@@ -43,7 +43,7 @@ public class App {
             Job job = Job.getInstance(_conf);
 
             job.setJobName("test");
-            job.setJarByClass(App.class);
+            job.setJarByClass(AvgStat.class);
             job.setMapperClass(MyMapper.class);
             job.setCombinerClass(MyReduce.class);
             job.setReducerClass(MyReduce.class);
