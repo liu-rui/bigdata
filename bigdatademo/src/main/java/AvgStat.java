@@ -13,6 +13,10 @@ import org.apache.hadoop.util.ToolRunner;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
+
+/***
+ * 统计平均数
+ */
 public class AvgStat {
     public static class MyMapper extends Mapper<Object, Text, Text, IntWritable> {
         @Override
