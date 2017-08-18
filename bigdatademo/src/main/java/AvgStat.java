@@ -49,13 +49,14 @@ public class AvgStat {
             job.setJobName("test");
             job.setJarByClass(AvgStat.class);
             job.setMapperClass(MyMapper.class);
-            job.setCombinerClass(MyReduce.class);
+//            job.setCombinerClass(MyReduce.class);
             job.setReducerClass(MyReduce.class);
             job.setOutputKeyClass(Text.class);
             job.setOutputValueClass(IntWritable.class);
 
             FileInputFormat.addInputPath(job, new Path(args[0]));
             FileOutputFormat.setOutputPath(job, new Path(args[1]));
+
             return job.waitForCompletion(true) ? 0 : 1;
         }
 
