@@ -1,4 +1,8 @@
+package config;
+
 import org.apache.hadoop.conf.Configuration;
+
+import java.util.Map;
 
 /***
  * 操作配置文件
@@ -15,5 +19,9 @@ public class ConfigDemo {
         System.out.println(conf.get("dfs.name.dir"));
         //dfs.data.dir 已经被覆盖
         System.out.println(conf.get("dfs.data.dir"));
+
+        for (Map.Entry<String, String> entry : conf) {
+            System.out.println(entry);
+        }
     }
 }

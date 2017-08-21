@@ -16,6 +16,13 @@ import java.util.StringTokenizer;
 
 /***
  * 统计平均数
+ *
+ * export HADOOP_CLASSPATH="target/classes/"
+ * 按照hadoop的部署方式，应用运行也是三种方式
+ * １．local
+ *　　hadoop AvgStat -fs file:/// -jt local input output
+ * 2.伪分布式
+ * 3.分布式
  */
 public class AvgStat {
     public static class MyMapper extends Mapper<Object, Text, Text, IntWritable> {
