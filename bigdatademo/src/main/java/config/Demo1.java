@@ -6,15 +6,16 @@ import org.apache.hadoop.util.ToolRunner;
 
 import javax.print.DocFlavor;
 import java.util.Arrays;
+import java.util.Map;
 
 
 /***
  * 1.Configuration默认会加载core-default.xml和core.site.xml文件（Configuration　static块）
- * export HADOOP_CLASSPATH="/media/liurui/data/code/bigdata/bigdatademo/target/bigdatademo-1.0-SNAPSHOT.jar:$HADOOP_CLASSPATH"
- * hadoop config.Demo1
+ * export HADOOP_CLASSPATH="target/classes"
+ * hadoop config.Demo1 | grep  "ftp.replication"
  * 默认是３
  * 替换ftp.replication　为34
- * hadoop config.Demo1 -Dftp.replication=34
+ * hadoop config.Demo1 -Dftp.replication=34  | grep  "ftp.replication"
  */
 public class Demo1 {
 
@@ -31,8 +32,10 @@ public class Demo1 {
             System.out.println("输入的参数：");
             System.out.println(Arrays.toString(args));
 
-            System.out.println("-----------");
-            System.out.println(configuration.get("ftp.replication"));
+            for (Map.Entry<String, String> stringEntry : configuration) {
+                System.out.println(String.format("%s:%s" , stringEntry.getKey() , stringEntry.getValue()));
+            }
+            System.out.println(configuration.get("aaa"));
             return 0;
         }
 

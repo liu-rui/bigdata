@@ -23,6 +23,7 @@ import java.util.StringTokenizer;
  *　　hadoop AvgStat -fs file:/// -jt local input output
  * 2.伪分布式
  * 3.分布式
+ *  hadoop AvgStat /input /output
  */
 public class AvgStat {
     public static class MyMapper extends Mapper<Object, Text, Text, IntWritable> {
