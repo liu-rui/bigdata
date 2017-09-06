@@ -18,12 +18,12 @@ import static org.junit.Assert.*;
 
 public class Demo2Test {
 
-    @Test
+
     public void test() throws URISyntaxException, IOException {
         Class keyClass = IntWritable.class;
         Class valueClass = Text.class;
         Configuration configuration = new Configuration();
-        configuration.set("fs.defaultFS", "hdfs://172.18.115.110:9000");
+        configuration.set("fs.defaultFS", "hdfs://localhost:9000");
         SequenceFile.Writer writer = SequenceFile.createWriter(configuration,
                 SequenceFile.Writer.file(new Path("a.seq")),
                 SequenceFile.Writer.keyClass(keyClass),
