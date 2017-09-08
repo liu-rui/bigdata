@@ -14,6 +14,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.StringUtils;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
+import sun.rmi.runtime.Log;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -143,14 +144,14 @@ public class PageRankDemo {
             while (true) {
                 i++;
                 conf.setInt("step", i);
-                ret = execute(i == 1 ? args[0] : String.format("%s/step%d", args[1], i - 1), String.format("%s/step%d", args[1], i));
+                if(execute(i == 1 ? args[0] : String.format("%s/step%d", args[1], i - 1), String.format("%s/step%d", args[1], i)) < 10)
+                    break;
                 if (ret != 0) break;
-                if (i == 2) break;
             }
             return ret;
         }
 
-        private int execute(String input, String output) throws IOException, ClassNotFoundException, InterruptedException {
+        private long execute(String input, String output) throws IOException, ClassNotFoundException, InterruptedException {
             Job job = Job.getInstance(getConf());
 
             job.setMapperClass(MyMapper.class);
@@ -166,11 +167,10 @@ public class PageRankDemo {
                 fileSystem.delete(outputPath, true);
 
             FileOutputFormat.setOutputPath(job, outputPath);
-            int ret = job.waitForCompletion(true) ? 0 : 1;
+            if (!job.waitForCompletion(true))
+                throw new IOException();
 
-
-            System.out.println(job.getCounters().findCounter(A.BB).getValue());
-            return ret;
+            return job.getCounters().findCounter(A.BB).getValue() / 4;
         }
 
 
