@@ -275,7 +275,6 @@ public class TFIDFDemo {
         }
     }
 
-
     public static void main(String[] args) throws Exception {
         ToolRunner.run(new Configuration(), new MainTool(), args);
     }
