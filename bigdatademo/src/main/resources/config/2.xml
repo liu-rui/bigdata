@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <property>
-        <name>dfs.data.dir</name>
-        <value>bb</value>
-    </property>
-</configuration>

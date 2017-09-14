@@ -6,11 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bigdatademo" />
+        <module name="hbase" />
+        <module name="liuruihbase" />
+        <module name="liuruihive" />
+        <module name="yarn" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bigdatademo" target="1.8" />
+      <module name="hbase" target="1.8" />
+      <module name="liuruihbase" target="1.8" />
+      <module name="liuruihive" target="1.8" />
+      <module name="yarn" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

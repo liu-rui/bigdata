@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bigdatademo.iml" filepath="$PROJECT_DIR$/bigdatademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liuruihbase/hbase.iml" filepath="$PROJECT_DIR$/liuruihbase/hbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liuruihive/liuruihive.iml" filepath="$PROJECT_DIR$/liuruihive/liuruihive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yarn/yarn.iml" filepath="$PROJECT_DIR$/yarn/yarn.iml" />
     </modules>
   </component>
 </project>
