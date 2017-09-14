@@ -74,6 +74,7 @@ public class MapRedDemo3 {
 
             job.setJarByClass(getClass());
             Scan scan = new Scan();
+            scan.setCaching(500);
             scan.setCacheBlocks(false);
 
             TableMapReduceUtil.initTableMapperJob(TABLE_NAME,

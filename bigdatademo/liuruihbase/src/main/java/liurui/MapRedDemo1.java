@@ -25,6 +25,7 @@ import java.io.IOException;
  * 数据源来自hbase
  * 结果存入hdfs
  * 执行方式　　jar hbase.MapRedDemo1  输出目录
+ * 服务器上执行：hadoop  jar a.jar  -Dzookeeper.znode.parent=/hbase-unsecure -Dhbase.zookeeper.quorum=host17218115111,host17218115112,host17218115113 output
  */
 public class MapRedDemo1 {
     private static String TABLE_NAME = "customer1";
@@ -71,21 +72,18 @@ public class MapRedDemo1 {
             job.setJarByClass(getClass());
 
             Scan scan = new Scan();
+            scan.setCaching(500);
             scan.setCacheBlocks(false);
 
             TableMapReduceUtil.initTableMapperJob(TABLE_NAME,
                     scan,
                     MyMapper.class,
-                    null,
-                    null,
+                    Text.class,
+                    IntWritable.class,
                     job,
                     false);
 
             job.setReducerClass(MyReducer.class);
-
-            job.setOutputKeyClass(Text.class);
-            job.setOutputValueClass(IntWritable.class);
-
             FileSystem fileSystem = FileSystem.get(getConf());
             Path outputPath = new Path(args[0]);
 
