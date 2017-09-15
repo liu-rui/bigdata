@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 /***
- * 使用计数器统计
+ * 使用计数器统计无效的分数（小于０或者大于１００）
  */
 public class Demo3 {
 
