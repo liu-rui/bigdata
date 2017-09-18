@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="flume" />
         <module name="hadoop" />
         <module name="hbase" />
         <module name="hive" />
@@ -13,6 +14,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bigdata" target="1.8" />
+      <module name="flume" target="1.8" />
       <module name="hadoop" target="1.8" />
       <module name="hbase" target="1.8" />
       <module name="hive" target="1.8" />
