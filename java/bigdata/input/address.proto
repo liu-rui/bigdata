@@ -1,0 +1,12 @@
+package com.demo;
+
+
+option java_package = "com.github.liurui";
+option java_outer_classname = "AddressProtos";
+
+message Address {
+ required string city = 1;
+ required string street = 2;
+}
+
+
