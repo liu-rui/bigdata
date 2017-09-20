@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/hadoop/hadoop.iml" filepath="$PROJECT_DIR$/hadoop/hadoop.iml" />
       <module fileurl="file://$PROJECT_DIR$/hbase/hbase.iml" filepath="$PROJECT_DIR$/hbase/hbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/hive/hive.iml" filepath="$PROJECT_DIR$/hive/hive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/impala/impala.iml" filepath="$PROJECT_DIR$/impala/impala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oozie/oozie.iml" filepath="$PROJECT_DIR$/oozie/oozie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phoenix/phoenix.iml" filepath="$PROJECT_DIR$/phoenix/phoenix.iml" />
     </modules>
   </component>
 </project>
