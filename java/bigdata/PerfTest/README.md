@@ -19,6 +19,7 @@
     ```
 5. 部署
    1. 使用hive + hdfs存储数据
+   * 表定义
 ```text
 create table if not exists customer(
 customer_id int,
@@ -43,7 +44,8 @@ order_date TIMESTAMP
 STORED as TEXTFILE;
 
 ```
-   
+    * 导入脚本
+    
 ```bash
 load data local inpath '/media/liurui/data/code/bigdata/java/bigdata/customer.csv' into table customer;
 load data local inpath '/media/liurui/data/code/bigdata/java/bigdata/item.csv' into table item;
