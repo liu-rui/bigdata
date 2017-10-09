@@ -8,6 +8,7 @@
     4. 使用impala + hive + hbase存储数据　(不可取)
     5. 使用phoenix + hbase存储数据
     6. 使用kylin
+    7. 使用mysql
 4. 测试的语句
     1. 统计订单表个数
     ```sql
@@ -108,8 +109,8 @@
     
          create EXTERNAL table if not exists hbase_orderLog(
                 order_id string,
-                customer_id int,
-                item_id int,
+                customer_id string,
+                item_id string,
                 price int,
                 order_date TIMESTAMP) 
          STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
@@ -126,3 +127,35 @@
           
           nohup beeline -u jdbc:hive2://localhost:10000/default -n root -p root -e 'from orderlog insert into table hbase_orderlog select *;' & 
    
+    7. 使用mysql
+        * sql语句
+            ```sql
+            create table if not exists customer(
+            customer_id int PRIMARY key,
+            name nvarchar(50),
+            sex int
+            );
+            
+            create table if not exists item(
+            item_id int PRIMARY  KEY,
+            name nvarchar(50)
+            );
+            
+            create table if not exists orderLog(
+            order_id int PRIMARY  key,
+            customer_id int,
+            item_id int,
+            price int,
+            order_date TIMESTAMP
+            );
+            alter table orderLog add foreign key (customer_id) references customer (customer_id);
+            alter table orderLog add foreign key (item_id) references item (item_id);
+          ```
+        * 导入数据
+           ```bash
+           mysql -h 172.18.115.132 --local-infile -uroot -p1234 lrtest -e "LOAD DATA LOCAL INFILE 'customer.csv' INTO TABLE customer FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'"
+           mysql -h 172.18.115.132 --local-infile -uroot -p1234 lrtest -e "LOAD DATA LOCAL INFILE 'item.csv' INTO TABLE item FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'"
+           
+           #使用mysql太慢，这里使用了sqoop，采用mapreduce方式
+           sqoop-export   --connect jdbc:mysql://172.18.115.132:3306/lrtest  --username root  --password 1234 --table orderLog --input-null-string '\\N' --input-null-non-string '\\N' --input-fields-terminated-by ',' --export-dir /user/hive/warehouse/orderlog;
+           ```
