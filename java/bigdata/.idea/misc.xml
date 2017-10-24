@@ -8,7 +8,17 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/DataGenerator/pom.xml" />
+        <option value="$PROJECT_DIR$/flume/pom.xml" />
+        <option value="$PROJECT_DIR$/hadoop/pom.xml" />
+        <option value="$PROJECT_DIR$/hbase/pom.xml" />
+        <option value="$PROJECT_DIR$/hive/pom.xml" />
         <option value="$PROJECT_DIR$/impala/pom.xml" />
+        <option value="$PROJECT_DIR$/kylin/pom.xml" />
+        <option value="$PROJECT_DIR$/oozie/pom.xml" />
+        <option value="$PROJECT_DIR$/phoenix/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
+        <option value="$PROJECT_DIR$/storm/pom.xml" />
       </set>
     </option>
   </component>

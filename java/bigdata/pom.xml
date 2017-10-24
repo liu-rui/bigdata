@@ -16,6 +16,8 @@
       <module>storm</module>
       <module>kylin</module>
       <module>DataGenerator</module>
+      <module>redis</module>
+      <module>kafka</module>
   </modules>
   <packaging>pom</packaging>
   <name>bigdata</name>
