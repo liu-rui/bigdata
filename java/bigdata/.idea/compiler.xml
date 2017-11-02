@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="elasticsearch" />
         <module name="kafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bigdata" target="1.8" />
       <module name="DataGenerator" target="1.8" />
+      <module name="elasticsearch" target="1.8" />
       <module name="flume" target="1.8" />
       <module name="hadoop" target="1.8" />
       <module name="hbase" target="1.8" />

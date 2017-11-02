@@ -18,6 +18,7 @@
       <module>DataGenerator</module>
       <module>redis</module>
       <module>kafka</module>
+    <module>elasticsearch</module>
   </modules>
   <packaging>pom</packaging>
   <name>bigdata</name>

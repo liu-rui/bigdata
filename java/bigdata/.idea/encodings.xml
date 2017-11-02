@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/DataGenerator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elasticsearch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flume" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hadoop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hbase" charset="UTF-8" />
