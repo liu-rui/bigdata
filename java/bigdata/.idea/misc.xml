@@ -17,7 +17,9 @@
         <option value="$PROJECT_DIR$/hbase/pom.xml" />
         <option value="$PROJECT_DIR$/hive/pom.xml" />
         <option value="$PROJECT_DIR$/impala/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka/pom.xml" />
         <option value="$PROJECT_DIR$/kylin/pom.xml" />
+        <option value="$PROJECT_DIR$/mongo/pom.xml" />
         <option value="$PROJECT_DIR$/oozie/pom.xml" />
         <option value="$PROJECT_DIR$/phoenix/pom.xml" />
         <option value="$PROJECT_DIR$/redis/pom.xml" />

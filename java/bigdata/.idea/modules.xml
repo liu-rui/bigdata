@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/impala/impala.iml" filepath="$PROJECT_DIR$/impala/impala.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka/kafka.iml" filepath="$PROJECT_DIR$/kafka/kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/kylin/kylin.iml" filepath="$PROJECT_DIR$/kylin/kylin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mongo/mongo.iml" filepath="$PROJECT_DIR$/mongo/mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/oozie/oozie.iml" filepath="$PROJECT_DIR$/oozie/oozie.iml" />
       <module fileurl="file://$PROJECT_DIR$/phoenix/phoenix.iml" filepath="$PROJECT_DIR$/phoenix/phoenix.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />

@@ -19,7 +19,7 @@
       <module>redis</module>
       <module>kafka</module>
     <module>elasticsearch</module>
-    <module>elasticsearch</module>
+      <module>mongo</module>
   </modules>
   <packaging>pom</packaging>
   <name>bigdata</name>

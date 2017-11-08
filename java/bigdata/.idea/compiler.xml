@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="elasticsearch" />
-        <module name="kafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +20,7 @@
       <module name="impala" target="1.8" />
       <module name="kafka" target="1.8" />
       <module name="kylin" target="1.5" />
+      <module name="mongo" target="1.8" />
       <module name="oozie" target="1.8" />
       <module name="phoenix" target="1.8" />
       <module name="redis" target="1.5" />

@@ -1,0 +1,3 @@
+elasticsearch:
+  user: elastic:changeme
+  clusterNodes: 172.18.115.54:9300
